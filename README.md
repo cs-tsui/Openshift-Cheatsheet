@@ -1,4 +1,4 @@
-# Openshift-Cheatsheet
+## Openshift-Cheatsheet
 
 Approve CSR
 
@@ -14,6 +14,18 @@ See trusted CA
 
 `oc get image.config.openshift.io/cluster -o yaml`
 
+
+Check pull secret on OCP nodes
+```
+# pull secret on normal cluster
+cat /var/lib/kubelet/config.json
+
+# pull secret on ROKS cluster
+cat ~/.docker/config.json
+
+# mirror registry file
+cat /etc/containers/registries.conf
+```
 
 
 ## OpenSSL
