@@ -13,3 +13,11 @@ Print out global pull secret
 See trusted CA
 
 `oc get image.config.openshift.io/cluster -o yaml`
+
+
+
+## OpenSSL
+
+Show certs on target host/port
+
+`openssl s_client -connect $HOST:$PORT -showcerts`
