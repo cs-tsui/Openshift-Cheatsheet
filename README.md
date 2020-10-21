@@ -25,6 +25,9 @@ cat ~/.docker/config.json
 
 # mirror registry file
 cat /etc/containers/registries.conf
+
+# trim String - remove first part
+echo "delimited.string" | cut -d '.' -f2-
 ```
 
 
