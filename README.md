@@ -30,8 +30,8 @@ cat /etc/containers/registries.conf
 echo "delimited.string" | cut -d '.' -f2-
 ```
 
-
 Get Ingress Domain
+
 `oc get --namespace=openshift-ingress-operator ingresscontroller/default -o jsonpath='{.status.domain}'`
 
 ## OpenSSL
