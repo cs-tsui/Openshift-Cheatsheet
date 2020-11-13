@@ -34,6 +34,10 @@ Get Ingress Domain
 
 `oc get --namespace=openshift-ingress-operator ingresscontroller/default -o jsonpath='{.status.domain}'`
 
+Add SCC
+
+`oc adm policy add-scc-to-user anyuid -z my-serviceaccount`
+
 ## OpenSSL
 
 Show certs on target host/port
