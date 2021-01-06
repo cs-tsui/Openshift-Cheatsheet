@@ -30,6 +30,9 @@ cat /etc/containers/registries.conf
 echo "delimited.string" | cut -d '.' -f2-
 ```
 
+See the syntax for different k8s objects
+`oc explain pods --recursive`
+
 Get Ingress Domain
 
 `oc get --namespace=openshift-ingress-operator ingresscontroller/default -o jsonpath='{.status.domain}'`
