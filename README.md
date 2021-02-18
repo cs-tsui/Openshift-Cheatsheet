@@ -4,6 +4,8 @@ Approve CSR
 
 `oc get csr -o name | sed -e 's/.*\///g' | xargs -I {} oc adm certificate approve {}`
 
+`oc adm certificate approve $(oc get csr | grep -i pending | awk '{print $1}' | grep -v NAME)`
+
 
 Print out global pull secret
 
