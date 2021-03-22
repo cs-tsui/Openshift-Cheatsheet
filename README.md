@@ -49,3 +49,10 @@ Add SCC
 Show certs on target host/port
 
 `openssl s_client -connect $HOST:$PORT -showcerts`
+
+
+## Podman/Docker
+
+Show selected fields
+
+`sudo podman ps --format="{{.ID}} {{.Names}} {{.Ports}}"`
