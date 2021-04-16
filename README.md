@@ -44,6 +44,18 @@ Add SCC
 
 `oc adm policy add-scc-to-user anyuid -z my-serviceaccount`
 
+
+Point to specific PVC for image registry and enable
+
+```
+oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch \
+  '{"spec":{"storage":{"pvc":{"claim":"image-registry-storage"}}}}'
+  
+# Enable
+oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch \
+  '{"spec":{"managementState":"Managed"}}'
+```
+
 ## OpenSSL
 
 Show certs on target host/port
@@ -56,3 +68,4 @@ Show certs on target host/port
 Show selected fields
 
 `sudo podman ps --format="{{.ID}} {{.Names}} {{.Ports}}"`
+
