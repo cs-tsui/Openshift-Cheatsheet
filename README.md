@@ -69,3 +69,14 @@ Show selected fields
 
 `sudo podman ps --format="{{.ID}} {{.Names}} {{.Ports}}"`
 
+
+## Save Text with 'cat'
+  
+```
+cat << EOF > kafka.properties
+bootstrap.servers=kafka:9071
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="test" password="test123";
+sasl.mechanism=PLAIN
+security.protocol=SASL_PLAINTEXT
+EOF
+```
